@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import bgSvg from './background.svg'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div class="overscroll-none" style={{ backgroundImage: `url(${bgSvg})` }}>
+      <App />
+    </div>
   </React.StrictMode>
 );
 
