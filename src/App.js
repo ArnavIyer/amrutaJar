@@ -10,7 +10,6 @@ function App() {
   const [data, setData] = useState(null);
 
   const fetchData = () => {
-    setLoading(true);
     fetch('https://e9c61hf4pb.execute-api.us-east-2.amazonaws.com/default/amrutaCompliment')
         .then(response => {
             if (!response.ok) {
@@ -20,11 +19,9 @@ function App() {
         })
         .then(data => {
             setData(data);
-            setLoading(false);
         })
         .catch(error => {
             console.error('Error fetching data:', error);
-            setLoading(false);
         });
     console.log(data);
   };
