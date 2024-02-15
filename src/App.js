@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import './App.css';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Dialog, Transition } from '@headlessui/react';
@@ -7,9 +7,7 @@ function App() {
   const [isClicked, setIsClicked] = useState(false);
   const [particlesVisible, setParticlesVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   const fetchData = () => {
     setLoading(true);
